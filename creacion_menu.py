@@ -29,15 +29,12 @@ for i in lista_menus:
     print('$', lista_precios[indice])
     indice = 1 + indice
 
-archivo_menus = open('lista_menu.txt', 'w')
-archivo_menus.write(lista_menus)
+import pickle
 
-strings = [str(x) for x in lista_precios)
+archivo_menus = open('lista_menu', 'wb')
+pickle.dump(lista_menus,archivo_menus)
+archivo_menus.close()
 
-strings = open('lista_precios.txt', 'w')
-strings.write('lista_precios= % s','w')
-
-# lista_precios = open('lista_precios.txt','w')
-
-# print(lista_menus)
-# print(lista_precios)
+archivo_precios = open('lista_precio', 'wb')
+pickle.dump(lista_precios,archivo_precios)
+archivo_precios.close()
