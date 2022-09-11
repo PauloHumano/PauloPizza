@@ -38,5 +38,5 @@ for i in lista_cantidad_pedido:
 
     print(indice, end='\t')
     print(lista_cantidad_pedido[indice], end='\t')
-    print(lista_item_pedido[indice])
+    print(lista_menus[lista_item_pedido[indice]])
     indice = 1 + indice
