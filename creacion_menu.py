@@ -1,5 +1,6 @@
 # Creacion lista_menu
 
+import pickle
 cantidad_items = int(input('ingrese cantidad de items: '))
 
 
@@ -29,12 +30,11 @@ for i in lista_menus:
     print('$', lista_precios[indice])
     indice = 1 + indice
 
-import pickle
 
 archivo_menus = open('lista_menu', 'wb')
-pickle.dump(lista_menus,archivo_menus)
+pickle.dump(lista_menus, archivo_menus)
 archivo_menus.close()
 
 archivo_precios = open('lista_precio', 'wb')
-pickle.dump(lista_precios,archivo_precios)
+pickle.dump(lista_precios, archivo_precios)
 archivo_precios.close()
